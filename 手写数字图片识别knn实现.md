@@ -1,3 +1,4 @@
+代码：
 ```python
 import pandas as pd
 import numpy as np
@@ -28,3 +29,6 @@ cv_scores2 = cross_val_score(knn, train_images, train_labels, cv=10)
 print("KNN(cross):", np.mean(cv_scores2))
 ```
 
+运行结果：
+
+![image](https://user-images.githubusercontent.com/116483698/225035566-d698132b-630e-4387-b61f-bc7078e9b5cc.png)
