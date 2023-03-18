@@ -149,11 +149,11 @@ with torch.no_grad():
     print('Accuracy of the network on the 10000 test images: {} %'.format(100 * correct / total))
 ```
 > 对于 _, predicted = torch.max(outputs.data, 1)，这里返回两组数据，最大image_data和最大值索引，可以用torch.argmax（）更为直观；这里去理解其作用为返回最大索引，即预测出来的类别。
-> _ , predicted是python的一种常用的写法，表示后面的函数其实会返回两个值，但是我们对第一个值不感兴趣，就写个_在那里，把它赋值给_就好，我们只关心第二个值predicted
-> 比如 _ ,a = 1,2 这中赋值语句在python中是可以通过的，你只关心后面的等式中的第二个位置的值是多少
+> _ , predicted是python的一种常用的写法，表示后面的函数其实会返回两个值，第一个值赋值给_，我们只关心第二个值predicted
+> 比如 _ ,a = 1,2 这中赋值语句在python中是可以通过的
 
 运行结果（迭代50次，只截取开头和结尾的部分迭代）：
 ![image](https://user-images.githubusercontent.com/116483698/226078475-74def5e7-a09b-4987-977d-0e107b9826df.png)
 ![image](https://user-images.githubusercontent.com/116483698/226078486-9d6fc16d-c9b9-4c91-a9e6-565e4fd4cd07.png)
-![image](https://user-images.githubusercontent.com/116483698/226078501-6afd2c09-d47a-4a98-bf88-74ced72fb00c.png)
+![image](https://user-images.githubusercontent.com/116483698/226079348-202c9e8a-0ce9-4bc8-a227-95e4ff446aab.png)
 
