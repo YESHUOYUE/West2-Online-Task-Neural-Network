@@ -294,7 +294,7 @@ with torch.no_grad():
         total += labels.size(0)  ##更新测试图片的数量   size(0),返回行数
         correct += (predicted == labels).sum().item() ##更新正确分类的图片的数量
 
-    print('Accuracy of the network on the 10000 test images: {} %'.format(100 * correct / total))
+    print('Accuracy of the network on the test images: {} %'.format(100 * correct / total))
 ```
 > 对于 _, predicted = torch.max(outputs.data, 1)，这里返回两组数据，最大image_data和最大值索引，可以用torch.argmax（）更为直观；这里去理解其作用为返回最大索引，即预测出来的类别。
 > _ , predicted是python的一种常用的写法，表示后面的函数其实会返回两个值，第一个值赋值给_，我们只关心第二个值predicted
